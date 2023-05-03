@@ -4,8 +4,9 @@
 read -p "Enter model name (default: User): " USER_MODEL
 USER_MODEL=${USER_MODEL:-User}
 
+USER_MODEL_FILENAME = $(echo "$USER_MODEL" | tr '[:upper:]' '[:lower:]')
 # Define variables
-USER_MODEL_FILE="app/models/$USER_MODEL.rb"
+USER_MODEL_FILE="app/models/$USER_MODEL_FILENAME.rb"
 ROUTES_FILE="config/routes.rb"
 # Install Devise gem
 echo "Installing Devise gem..."
