@@ -75,3 +75,4 @@ group :test do
 end
 gem 'devise'
 # gem 'sass-rails'
+gem "cancancan", "~> 3.5"
