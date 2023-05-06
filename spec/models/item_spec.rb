@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Item, type: :model do
   context 'validation tests' do
-    first_user = User.create(name: 'John', email: 'contact@prantalks.com', password: 'Password')
+    first_user = User.create(name: 'John', email: 'contact@example.com', password: 'Password')
     before(:each) do
       first_category = Category.create(name: 'Food', icon: 'icon.jpg', user_id: first_user.id)
       @item = Item.create(name: 'mango', amount: 100, user_id: first_user.id,

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context 'validation tests' do
-    first_user = User.create(name: 'John', email: 'contact@prantalks.com', password: 'Password')
+    first_user = User.create(name: 'John', email: 'contact@example.com', password: 'Password')
 
     it 'is invalid without a name' do
       first_user.name = nil
