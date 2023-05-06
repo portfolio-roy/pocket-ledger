@@ -85,6 +85,7 @@ test:
 #
 production:
   <<: *default
-  database: pocket_ledger_production
-  username: pocket_ledger
-  password: <%= ENV["POCKET_LEDGER_DATABASE_PASSWORD"] %>
+  database: pocket_ledger
+  url: <%= ENV["DATABASE_URL"] %>
+  # username: pocket_ledger
+  # password: <%= ENV["POCKET_LEDGER_DATABASE_PASSWORD"] %>
