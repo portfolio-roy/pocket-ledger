@@ -1,0 +1,17 @@
+
+<%= form_with(model: item, url: category_items_path) do |form| %>
+<div class="header reg-head">
+<a href="<%= category_items_path %>">
+  <i class="fa-solid fa-arrow-left"></i>
+  </a>
+  <h2 class="ui-heading">NEW TRANSACTION</h2>
+    <%= form.submit "Create", class: "next-link" %>
+</div>
+<div class="form-container">
+
+    <%= form.text_field :name, placeholder: "Name" %>
+
+    <%= form.text_field :amount, placeholder: "Amount" %>
+
+  </div>
+<% end %>

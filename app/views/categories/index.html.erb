@@ -1,0 +1,36 @@
+<main>
+<div class="container new-item d-flex flex-column align-items-center px-0">
+    <div class="ui-header d-flex justify-content-between align-items-center">
+       <i class="fa-solid fa-bars"></i>
+        <h2 class="ui-heading">Categories</h2>
+        <a href="/logout" data-method="delete">
+            <i class="fa-solid fa-sign-out"></i>
+        </a>
+    </div>
+
+    <div class="categories col-12 p-2 grow-1">
+        <% if @categories.empty? %>
+      <div class="empty-message">You have not added any Category. Add one by clicking the button below.</div>
+        <% else %> <% @categories.each do |category| %>
+
+        <a href="<%= category_items_path(category.id) %>">
+
+            <div class="single-category col-12 d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-start align-items-center left">
+                <img src="<%= category.icon %>" alt="icon" class="category-icon">
+                <p class="category-name"><%= category.name %></p>
+                </div>
+                <p class="category-total justify-self-"> $ <%= category.total_transaction_amount %> </p>
+            </div>
+    
+        </a>
+
+        <% end %>
+        <% end %>
+
+ 
+        
+    </div>
+    <%= link_to "NEW CATEGORY", new_category_path, class: "btn btn-inset" %>
+</div>
+</main>

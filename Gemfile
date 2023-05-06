@@ -76,3 +76,5 @@ end
 gem 'devise'
 # gem 'sass-rails'
 gem "cancancan", "~> 3.5"
+
+gem "font-awesome-sass", "~> 6.4"
