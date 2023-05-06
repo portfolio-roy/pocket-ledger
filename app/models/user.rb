@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-    has_many :categories
-    has_many :items
-    
-    devise :database_authenticatable, :registerable,
-           :recoverable, :rememberable, :validatable
-  end
+  has_many :categories
+  has_many :items
+
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+end
