@@ -128,3 +128,9 @@ a {
 .grow-1 {
   flex-grow: 1;
 }
+
+.category-name,
+.item-name {
+  color: lighten($text, 20%);
+  font-weight: bold;
+}

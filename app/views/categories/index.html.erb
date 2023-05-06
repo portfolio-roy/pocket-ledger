@@ -18,9 +18,11 @@
             <div class="single-category col-12 d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-start align-items-center left">
                 <img src="<%= category.icon %>" alt="icon" class="category-icon">
+                
                 <p class="category-name"><%= category.name %></p>
+                
                 </div>
-                <p class="category-total justify-self-"> $ <%= category.total_transaction_amount %> </p>
+                <p class="category-total justify-self-"><strong> $ <%= category.total_transaction_amount %> </strong></p>
             </div>
     
         </a>
