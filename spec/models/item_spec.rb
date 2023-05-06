@@ -6,7 +6,7 @@ RSpec.describe Item, type: :model do
     before(:each) do
       first_category = Category.create(name: 'Food', icon: 'icon.jpg', user_id: first_user.id)
       @item = Item.create(name: 'mango', amount: 100, user_id: first_user.id,
-                                category_id: first_category.id)
+                          category_id: first_category.id)
     end
 
     it 'is invalid without a name' do
