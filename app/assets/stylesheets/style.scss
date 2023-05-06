@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import "font-awesome";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&display=swap");
+
+* {
+  font-family: "Figtree", sans-serif;
+}
+
+$main: #3778c2;
+$secondary: #5fb523;
+$text: #434b54;
+
+a {
+  text-decoration: none;
+  color: $text;
+}
+
+.next-link {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.auth,
+.new-cat,
+.new-item {
+  min-height: 100vh;
+
+  .inputs {
+    input {
+      outline: none;
+      border: none;
+      padding: 8px;
+    }
+  }
+}
+
+.container {
+  max-width: 540px;
+  width: 100%;
+  background-color: rgba(237, 237, 237, 0.243);
+  border: 1px solid lightgrey;
+}
+
+.category-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.categories,
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px auto;
+}
+
+.single-category,
+.single-item {
+  padding: 24px;
+  border: 1px solid rgba(128, 128, 128, 0.072);
+  box-shadow: 1px 2px 4px rgba(128, 128, 128, 0.116);
+}
+
+.single-category {
+  .left {
+    gap: 8px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.single-item {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.ui-header {
+  width: 100%;
+  background-color: $main;
+  color: white;
+  padding: 8px;
+
+  a {
+    color: white;
+  }
+}
+
+.ui-heading {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.btn-inset {
+  display: inline-block;
+  width: calc(100% - 20px);
+  margin: 16px auto;
+  padding: 16px;
+  border-radius: 0;
+  color: white;
+  background-color: $secondary;
+  box-shadow: 0 0 0 10px $secondary, inset 0 0 0 2px #fff;
+
+  &:hover {
+    color: white;
+    background-color: #157347;
+    box-shadow: 0 0 0 10px #157347, inset 0 0 0 2px #fff;
+  }
+}
+
+.btn-login {
+  width: 100%;
+  background-color: $main;
+  border-radius: 0;
+  color: white;
+
+  &:hover {
+    background-color: lighten($main, 10%);
+  }
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.category-name,
+.item-name {
+  color: lighten($text, 20%);
+  font-weight: bold;
+}

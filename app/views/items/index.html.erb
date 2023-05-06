@@ -1,0 +1,30 @@
+<main>
+    
+<div class="container new-item d-flex flex-column align-items-center px-0">
+    <div class="ui-header d-flex justify-content-between align-items-center">
+       <a href="<%= categories_path %>">
+  <i class="fa-solid fa-arrow-left"></i>
+  </a>
+        <h2 class="ui-heading">Transactions</h2>
+        <a href="/logout" data-method="delete">
+            <i class="fa-solid fa-sign-out"></i>
+        </a>
+    </div>
+
+
+<div class="items col-12 p-2 grow-1">
+
+<% if @items.empty? %>
+      <div class="empty-message">There are no Transactions for this category. Add one by clicking the button below.</div>
+    <% else %>
+  <% @items.each do |item| %>
+  <div class="single-item col-12 d-flex justify-content-between">
+      <p class="item-name"><%= item.name %></p>
+      <p><strong> $ <%= item.amount %> </strong></p>
+    </div>
+  <% end %>
+  <% end %>
+</div>
+<%= link_to "NEW TRANSACTION", new_category_item_path, class: "btn btn-inset" %>
+    </div>
+</main>

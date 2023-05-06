@@ -2,7 +2,7 @@
 if [ ! -f Gemfile ]; then
   # Fresh install
   gem install rails
-  rails new . --database=postgresql
+  rails new . --database=postgresql -j esbuild --css bootstrap
   npm install
 else
   # Existing project

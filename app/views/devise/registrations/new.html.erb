@@ -1,0 +1,35 @@
+<main>
+<div class="container auth d-flex flex-column align-items-center px-0">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'col-12' }) do |f| %>
+    <div class="ui-header d-flex justify-content-between align-items-center">
+       <a href="/">
+  <i class="fa-solid fa-arrow-left"></i>
+  </a>
+        <h2 class="ui-heading">Sign up</h2>
+        <%= f.submit "Sign Up", class: "next-link" %>
+
+    </div>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="col-12 border-top border-bottom inputs p-2 my-2">
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Enter your name here", class: "col-12 border-bottom" %>
+  </div>
+  <div class="field">
+    
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Enter your email", class: "col-12 border-bottom" %>
+  </div>
+  <div class="field">
+    
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Enter new password", class: "col-12 border-bottom" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password" %>
+  </div>
+  </div>
+<% end %>
+<%= render "devise/shared/links" %>
+</div>
+</main>

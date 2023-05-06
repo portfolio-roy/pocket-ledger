@@ -1,0 +1,15 @@
+
+<%= form_with(model: item, url: category_items_path, class: "col-12") do |form| %>
+<div class="ui-header d-flex justify-content-between align-items-center">
+        <%= link_to "<i class='fa-solid fa-arrow-left'></i>".html_safe, category_items_path %>
+        <h2 class="ui-heading">NEW TRANSACTION</h2>
+        <%= form.submit "Create", class: "next-link" %>
+    </div>
+<div class="col-12 border-top border-bottom inputs p-2 my-2 d-flex flex-column">
+
+    <%= form.text_field :name, placeholder: "Name", class: "col-12 border-bottom" %>
+
+    <%= form.text_field :amount, placeholder: "Amount", class: "col-12" %>
+
+  </div>
+<% end %>
